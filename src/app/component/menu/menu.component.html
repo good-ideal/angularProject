@@ -1,0 +1,12 @@
+<div class="menu-container">
+  <div class="menu-ul">
+    <ul>
+      <li *ngFor="let menu of menus">
+        <i class="bi bi-alarm-fill"></i>
+        <div routerLink="{{ menu.path }}" routerLinkActive="active">
+          {{ menu.name }}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
