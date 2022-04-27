@@ -12,7 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './component/menu/menu.component';
 import { HeaderComponent } from './component/header/header.component';
 import { ContentComponent } from './component/content/content.component';
-import { FooterComponent } from './component/footer/footer.component'; 
+import { FooterComponent } from './component/footer/footer.component';
+import { BreadcrumbComponent } from './component/breadcrumb/breadcrumb.component'; 
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { FooterComponent } from './component/footer/footer.component';
     HeaderComponent,
     ContentComponent,
     FooterComponent,
+    BreadcrumbComponent,
     
   ],
   imports: [
