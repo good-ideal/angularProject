@@ -53,5 +53,14 @@ export class TableComponent implements OnInit {
     ] as Table[];
   }
 
+  messageEvent(data): void {
+    if (data.type === "delete") {
+      console.log(`删除${data.row.name}`);
+      this.tables = this.tables.filter((table) => table.id !== data.row.id);
+    } else if (data.type === "edit") {
+      console.log(`编辑${data.row.name}`);
+    }
+  }
+
   ngOnInit() {}
 }

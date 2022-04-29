@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: "app-table-tr",
@@ -7,11 +7,23 @@ import { Component, OnInit } from "@angular/core";
   inputs: ["row"], //接收父组件传来的值
 })
 export class TableTrComponent implements OnInit {
+  @Output() messageEvent = new EventEmitter<any>();
+
   constructor() {}
 
   ngOnInit() {}
 
   delete(row: any): void {
-    console.log(row);
+    this.messageEvent.emit({
+      type: "delete",
+      row,
+    });
+  }
+
+  edit(row: any): void {
+    this.messageEvent.emit({
+      type: "edit",
+      row,
+    });
   }
 }
