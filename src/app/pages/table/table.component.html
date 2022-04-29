@@ -1,0 +1,35 @@
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">姓名</th>
+      <th scope="col">年龄</th>
+      <th scope="col">城市</th>
+      <th scope="col">时间</th>
+      <th scope="col">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of tables">
+      <th scope="row">{{ row.id }}</th>
+      <td>{{ row.name }}</td>
+      <td>{{ row.age }}</td>
+      <td>{{ row.location }}</td>
+      <td>{{ row.date }}</td>
+      <app-table-tr [row]="row"></app-table-tr>
+    </tr>
+  </tbody>
+</table>
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link">首页</a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">下一页</a>
+    </li>
+  </ul>
+</nav>

@@ -8,77 +8,8 @@ interface Menu{
 }
 
 const MENU :Menu[] = [{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
-},{
-  name: "页面1",
-  path: "first-component"
-},{
-  name: "页面2",
-  path: "second-component"
+  name: "表格管理",
+  path: "table-component"
 }]
 
 @Component({

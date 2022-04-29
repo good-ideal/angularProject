@@ -1,11 +1,12 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbs">
-      <a
-        *ngIf="!checkLast(breadcrumb); else elseBlock"
-        href="{{ breadcrumb.path }}"
-        >{{ breadcrumb.name }}</a
-      >
+    <li
+      class="breadcrumb-item"
+      *ngFor="let breadcrumb of breadcrumbs; let i = index"
+    >
+      <a *ngIf="!checkLast(i); else elseBlock" href="{{ breadcrumb.path }}">{{
+        breadcrumb.name
+      }}</a>
       <ng-template #elseBlock>{{ breadcrumb.name }}</ng-template>
     </li>
   </ol>

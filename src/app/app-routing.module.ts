@@ -1,21 +1,17 @@
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
-
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router"; // CLI imports router
+import { TableComponent } from "./pages/table/table.component";
 
 //定义路由
 const routes: Routes = [
-  { path: '**', redirectTo: 'pages' },
-    { path: 'first-component',data: {title: '测试'}, component: FirstComponent },
-    { path: 'second-component', data: {title: '测试1'}, component: SecondComponent ,
-      children: [{
-        path: 'third-component', data: {title: '测试2'}, component: SecondComponent
-      }]
-    }
-]
+  {
+    path: "table-component",
+    data: { title: "表格管理" },
+    component: TableComponent,
+  },
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
